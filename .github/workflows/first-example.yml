@@ -3,17 +3,12 @@ name: My first workflow
 on: push
 
 jobs:
-    checkout:
-        runs-on: ubuntu-latest
-        steps:
-        - name: doing a code checkout
-          run: actions/checkout@v4
 
     first_job:
         runs-on: ubuntu-latest
         steps:
         - name: doing a code checkout
-          run: actions/checkout@v4
+          uses: actions/checkout@v4
 
         - name: welcome to message
           run: echo "this is a run from actions"
